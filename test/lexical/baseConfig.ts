@@ -53,6 +53,26 @@ export const baseConfig: Partial<Config> = {
     ArrayFields,
     OnDemandForm,
     OnDemandOutsideForm,
+    {
+      slug: 'level2',
+      fields: [
+        {
+          name: 'relationship',
+          type: 'relationship',
+          relationTo: 'lexical-fully-featured',
+        },
+      ],
+    },
+    {
+      slug: 'repro',
+      fields: [
+        {
+          name: 'relationship',
+          type: 'relationship',
+          relationTo: 'level2',
+        },
+      ],
+    },
   ],
   globals: [TabsWithRichText],
 
